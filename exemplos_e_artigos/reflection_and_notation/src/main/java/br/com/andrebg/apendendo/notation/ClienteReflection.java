@@ -124,4 +124,21 @@ public class ClienteReflection {
         
         System.out.println("\n\n");
 	}
+	
+	
+	//Listagem 10
+	// Mostra valores apenas com anotação @Mostrar
+    public static void mostrarValores(Object obj) {
+          try {
+                 Class clazz = obj.getClass();
+                 for (Method m : clazz.getDeclaredMethods()) {
+                        if (m.isAnnotationPresent(Mostrar.class)){
+                               System.out.println(m.getName()+": "+m.invoke(obj));
+                        }
+                 }
+          } catch (Exception e) {
+                 // TODO Auto-generated catch block
+                 e.printStackTrace();
+          }
+    }
 }

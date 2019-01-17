@@ -1,4 +1,4 @@
-# Apendendo à cria e utilizar @Notation Javar
+# Apendendo à cria e utilizar @Annotation Javar
 
 Esse código veio de um artigo que encontrei no www.devmedia.com.br.
 
