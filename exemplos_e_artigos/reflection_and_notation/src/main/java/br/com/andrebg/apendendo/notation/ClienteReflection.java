@@ -129,13 +129,17 @@ public class ClienteReflection {
 	//Listagem 10
 	// Mostra valores apenas com anotação @Mostrar
     public static void mostrarValores(Object obj) {
-          try {
-                 Class clazz = obj.getClass();
-                 for (Method m : clazz.getDeclaredMethods()) {
-                        if (m.isAnnotationPresent(Mostrar.class)){
-                               System.out.println(m.getName()+": "+m.invoke(obj));
-                        }
-                 }
+    	try {
+            Class clazz = obj.getClass();
+            for (Method m : clazz.getDeclaredMethods()) {
+                   if (m.isAnnotationPresent(Mostrar.class)){
+                          if (m.getParameterTypes().length > 0){
+                                System.err.println(" "+m.getName()+" anotado com @Mostrar de forma errada, ignorando ...");
+                                continue;
+                          }
+                          System.out.println(m.getName()+": "+m.invoke(obj));
+                   }
+            }
           } catch (Exception e) {
                  // TODO Auto-generated catch block
                  e.printStackTrace();
