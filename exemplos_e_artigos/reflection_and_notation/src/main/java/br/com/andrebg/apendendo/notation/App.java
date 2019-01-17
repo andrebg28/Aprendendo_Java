@@ -10,5 +10,7 @@ public class App
     {
     	ClienteReflection.listagem_2();
     	ClienteReflection.listagem_2a();
+    	ClienteReflection.listagem_3();
+    	ClienteReflection.listagem_4();
     }
 }
