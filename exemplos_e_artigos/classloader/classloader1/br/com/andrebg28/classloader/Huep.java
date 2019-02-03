@@ -1,14 +1,18 @@
-package br.com.andrebg.apendendo.notation;
+package br.com.andrebg28.classloader;
 
-//Listagem 9
+/*
+ * Origem do código:
+ * https://softbork.com/blog/index.php?id=8
+ */
+
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
-import java.lang.reflect.InvocationTargetException;
 
-@Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Mostrar {
+@Target(ElementType.TYPE)
+
+public @interface Huep {
 
 }
